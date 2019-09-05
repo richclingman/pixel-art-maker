@@ -1,3 +1,3 @@
 document
 .getElementById('canvas')
-.addEventListener('click', event => event.target.classList.toggle('red'))
+.addEventListener('click', event => event.target.style.backgroundColor = 'blue')
