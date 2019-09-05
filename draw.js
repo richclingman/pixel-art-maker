@@ -32,6 +32,11 @@ document
 
     })
 
+document
+    .getElementById('colorPicker')
+    .addEventListener('input', event => document.getElementById('currentColor').style.backgroundColor = event.target.value);
+
+
 function colorSquare(event) {
     return event.target.style.backgroundColor = document.getElementById('currentColor').style.backgroundColor;
 }
