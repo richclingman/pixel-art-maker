@@ -1,0 +1,12 @@
+.row {
+    display: flex;
+}
+
+div#canvas {}
+
+.square {
+    width: 15px;
+    height: 15px;
+    background: red;
+    border: 1px solid gainsboro;
+}
