@@ -33,7 +33,7 @@ function createCanvas(height, width) {
     }
 }
 
-createCanvas(12, 50);
+createCanvas(12, 20);
 
 function createPalette() {
     const colorArray = ['red', 'blue', 'brown', 'purple', 'forestgreen', 'violet', 'magenta', 'cyan', 'black'];
