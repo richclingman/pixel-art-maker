@@ -1,6 +1,6 @@
 document
 .getElementById('canvas')
-.addEventListener('click', event => event.target.style.backgroundColor = 'blue')
+.addEventListener('click', event => event.target.style.backgroundColor = document.getElementById('currentColor').style.backgroundColor)
 
 document
 .getElementById('palette')
