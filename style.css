@@ -7,6 +7,10 @@ div#canvas {}
 .square {
     width: 15px;
     height: 15px;
-    background: red;
+    background: white;
     border: 1px solid gainsboro;
+}
+
+.red {
+    background: red;
 }
