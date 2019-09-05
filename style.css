@@ -15,11 +15,12 @@ div#container {
 
 div#canvas {
     margin-bottom: 10px;
+    width: fit-content;
 }
 
 .square {
-    width: 15px;
-    height: 15px;
+    width: 5px;
+    height: 5px;
     background: white;
     border: 1px solid gainsboro;
 }

@@ -20,6 +20,10 @@ document
     })
 
 document
+    .getElementById('canvas')
+    .addEventListener('mouseleave', () => doPainting = false)
+
+document
     .getElementById('palette')
     .addEventListener('click', event => {
         const selectedColor = window.getComputedStyle(event.target, null).getPropertyValue("background-color");
@@ -54,7 +58,7 @@ function createCanvas(height, width) {
     }
 }
 
-createCanvas(12, 20);
+createCanvas(50, 40);
 
 function createPalette() {
     const colorArray = ['red', 'blue', 'brown', 'purple', 'forestgreen', 'violet', 'magenta', 'cyan', 'black'];
