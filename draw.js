@@ -34,3 +34,24 @@ function createCanvas(height, width) {
 }
 
 createCanvas(12, 50);
+
+function createPalette() {
+    const colorArray = ['red', 'blue', 'brown', 'purple', 'forestgreen', 'violet', 'magenta', 'cyan', 'black'];
+    const newRow = document.createElement('div');
+    newRow.classList = ['row'];
+    
+    colorArray.forEach(color => {
+        const colorBlock = document
+            .createElement('div');
+        
+        colorBlock.classList = ['square'];
+        colorBlock.style.backgroundColor = color;
+    
+        newRow.appendChild(colorBlock);
+    })
+    
+    document.getElementById('palette').appendChild(newRow);
+}
+createPalette();
+
+
