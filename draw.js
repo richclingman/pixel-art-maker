@@ -1,6 +1,23 @@
+let doPainting = false;
+
 document
     .getElementById('canvas')
-    .addEventListener('click', event => event.target.style.backgroundColor = document.getElementById('currentColor').style.backgroundColor)
+    .addEventListener('mousedown', event => {
+        colorSquare(event);
+        doPainting = true
+    })
+
+document
+    .getElementById('canvas')
+    .addEventListener('mouseup', () => doPainting = false)
+
+document
+    .getElementById('canvas')
+    .addEventListener('mouseover', event => {
+        if (doPainting) {
+            colorSquare(event)
+        }
+    })
 
 document
     .getElementById('palette')
@@ -10,6 +27,10 @@ document
         document.getElementById('currentColor').style.backgroundColor = selectedColor
 
     })
+
+function colorSquare(event) {
+    return event.target.style.backgroundColor = document.getElementById('currentColor').style.backgroundColor;
+}
 
 function createCanvas(height, width) {
     for (let rowNum = 0; rowNum < height; rowNum++) {
@@ -39,17 +60,17 @@ function createPalette() {
     const colorArray = ['red', 'blue', 'brown', 'purple', 'forestgreen', 'violet', 'magenta', 'cyan', 'black'];
     const newRow = document.createElement('div');
     newRow.classList = ['row'];
-    
+
     colorArray.forEach(color => {
         const colorBlock = document
             .createElement('div');
-        
+
         colorBlock.classList = ['square'];
         colorBlock.style.backgroundColor = color;
-    
+
         newRow.appendChild(colorBlock);
     })
-    
+
     document.getElementById('palette').appendChild(newRow);
 }
 createPalette();
